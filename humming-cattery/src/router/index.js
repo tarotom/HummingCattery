@@ -11,7 +11,7 @@ import Breeder from "@/views/Breeder.vue"
 
 const routes = [
   {
-    path: "/",
+    path: "/HummingCattery",
     name: "Home",
     component: Home,
   },
