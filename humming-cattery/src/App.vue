@@ -4,17 +4,43 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <h1>YES!</h1>
-      <HelloWorld msg="You did it!" />
+  <div>
+    <Navbar></Navbar>
+    <div>
+      <!-- carousel => commented out, because it causes a lot of trouble -->
+      <!-- <main class="carouselContent">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="C:\Users\Tomi\Coding\FullStack\HummingFront\hummingfront.client\src\assets\Images\20230721_011959.jpg" class="d-block w-100 carouselImage" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\Tomi\Coding\FullStack\HummingFront\hummingfront.client\src\assets\Images\20230817_160944.jpg" class="d-block w-100 carouselImage" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\Tomi\Coding\FullStack\HummingFront\hummingfront.client\src\assets\Images\20230901_192112.jpg" class="d-block w-100 carouselImage" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\Tomi\Coding\FullStack\HummingFront\hummingfront.client\src\assets\Images\20231206_210954.jpg" class="d-block w-100 carouselImage" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\Tomi\Coding\FullStack\HummingFront\hummingfront.client\src\assets\Images\1609504678664.jpg" class="d-block w-100 carouselImage" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </main> -->
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <Footer></Footer>
     </div>
-  </header>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -27,9 +53,8 @@ h1 {
   padding-left: 20%;
 }
 
-header {
+.header {
   line-height: 1.5;
-  max-height: 100vh;
 }
 
 .logo {
@@ -37,29 +62,13 @@ header {
   margin: 0 auto 2rem;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.carouselImage {
+  height: 800px;
+  width: 500px;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+.pageContent {
+  width: 200%;
 }
 
 @media (min-width: 1024px) {
@@ -77,15 +86,6 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>
