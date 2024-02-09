@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: "/humming-cattery/",
+  base: "/HummingCattery/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
